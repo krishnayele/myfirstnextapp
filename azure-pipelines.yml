@@ -10,12 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: NodeTool@0
+- task: AzureStaticWebApp@0
   inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
-
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+    app_location: '/'
+    azure_static_web_apps_api_token: '745703cbc7919b6c80b35585a816fbbac6b586d2be6fceff6be31ed74a84743f1-5425a9ff-3c04-47eb-9310-202695b3dd7200024482'
